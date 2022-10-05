@@ -1,0 +1,43 @@
+<ng-container
+  *ngIf="{
+    isLoading: isLoading,
+    messageError: messageError
+  }"
+>
+  <div
+    class="app-items-list"
+    [ngClass]="{ 'app-items-list__error': isLoading }"
+  >
+  <h3 class="app-items-list__header">{{title}}</h3>
+    <ng-container *ngIf="!isLoading; else showError" [data]="data">
+      <mat-list role="list">
+        <mat-list-item
+          *ngFor="let item of data; else: showErrorData; let i = index"
+          class="app-items-list__content"
+        >
+          <a
+            *ngIf="item.id"
+            class="app-a"
+            (click)="itemSelected(item); $event.stopPropagation()"
+            >{{ i + 1 }}. {{ item.name }}</a
+          >
+          <a
+            *ngIf="item.id_team"
+            class="app-a"
+            (click)="itemSelected(item); $event.stopPropagation(); openDialog(item)"
+            >{{ i + 1 }}. {{ item.name }}</a
+          >
+        </mat-list-item>
+      </mat-list>
+    </ng-container>
+  </div>
+  <ng-container>
+    <ng-template #showError
+      ><p class="app-items-list__error">{{ messageError }}</p></ng-template
+    >
+    <p class="app-items-list__warning" *ngIf="data.length == 0 && !isLoading">
+      Make Team selection to get list of Players, No Players listed.
+    </p>
+    
+  </ng-container>
+</ng-container>

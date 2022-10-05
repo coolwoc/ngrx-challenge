@@ -1,0 +1,16 @@
+<div class="app-teams">
+  <app-items-list
+    [title]="teamHeader"
+    [data]="teams$ | async"
+    [isLoading]="isLoading$ | async"
+    [messageError]="messageError$ | async"
+    (selectedItem)="handlerSelectedItem($event)"
+  ></app-items-list>
+  <app-items-list
+    [title]="playersHeader"
+    [data]="selectedTeamPlayers$ | async"
+    [isLoading]="isLoading$ | async"
+    [messageError]="messageErrorPlayers$ | async"
+    (selectedItem)="handlerSelectedItem($event)"
+  ></app-items-list>
+</div>

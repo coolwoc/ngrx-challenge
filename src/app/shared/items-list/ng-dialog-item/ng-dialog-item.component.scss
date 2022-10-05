@@ -1,0 +1,33 @@
+@import '../../../../styles/colors.scss';
+
+#ng-dialog-item {
+  padding: 20px;
+  border: 3px solid $primary-dark;
+  border-radius: 3px;
+}
+
+#ng-dialog-item h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#ng-dialog-item .mat-dialog-content img {
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+
+#ng-dialog-item .mat-dialog-content p {
+  text-align: center;
+}
+
+#ng-dialog-item .mat-dialog-content p span {
+  color: $on-secondary;
+}
+
+#ng-dialog-item .mat-dialog-content p span.currency {
+  color: $secondary;
+  text-decoration: underline;
+}
+

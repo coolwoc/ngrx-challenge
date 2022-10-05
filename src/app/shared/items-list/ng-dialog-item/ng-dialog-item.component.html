@@ -1,0 +1,11 @@
+<div id="ng-dialog-item">
+  <h3 mat-dialog-title>{{ data.name }}</h3>
+
+  <mat-dialog-content>
+    <img src="{{ data.picture }}" />
+    <p>
+      <span>Value:</span
+      ><span> {{ data.value | currency: "EUR ":"symbol":"3.0" | thousand }}</span>
+    </p>
+  </mat-dialog-content>
+</div>

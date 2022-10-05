@@ -1,0 +1,26 @@
+@import '../../../styles/fonts';
+@import '../../../styles/colors';
+
+.app-page-header {
+  margin: 0 20px;
+  &__logo {
+    cursor: pointer;
+    display: block;
+    width: 210px;
+    height: 65pX;
+    background: transparent url('../../assets/images/logo-laliga-600x600.svg') 8px -62px / 200px auto no-repeat;
+    span {
+      display: block;
+      text-indent: -100000000000px;
+    }
+  }
+  &__subtitle {
+    // float: right;
+    text-align: right;
+    padding: 5px 8px;
+    color: $base;
+    background-color: $on-base;
+    padding-right: 20px;
+    font-size: $base-font-size14;
+  }
+}
