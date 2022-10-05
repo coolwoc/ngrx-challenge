@@ -1,4 +1,4 @@
-# Notes to RUN APP challenge LOCALLY
+# Notes to RUN APP Liga LOCALLY
 
 ## Run FrontEnd and API locally.
 - It is important to use `nvm version v16.10.0`.
